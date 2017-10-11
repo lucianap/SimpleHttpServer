@@ -11,7 +11,6 @@
     <properties>
         <jetty.version>9.4.5.v20170502</jetty.version>
         <jettyservlet.version>9.4.5.v20170502</jettyservlet.version>
-        <hystrix.version>1.5.13</hystrix.version>
     </properties>
 
     <repositories>
@@ -31,11 +30,6 @@
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
             <version>${jettyservlet.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.netflix.hystrix</groupId>
-            <artifactId>hystrix-core</artifactId>
-            <version>${hystrix.version}</version>
         </dependency>
     </dependencies>
 
