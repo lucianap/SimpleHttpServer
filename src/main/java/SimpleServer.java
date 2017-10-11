@@ -1,4 +1,4 @@
-import handlers.HelloServlet;
+import handlers.FaultyServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 
@@ -10,7 +10,7 @@ public class SimpleServer {
         Server server = new Server(8080);
         ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
         server.setHandler(handler);
-        handler.addServlet(HelloServlet.class, "/*");
+        handler.addServlet(FaultyServlet.class, "/test");
         server.start();
         server.dumpStdErr();
         server.join();
