@@ -7,10 +7,10 @@ public class SimpleServer {
 
     public static void main( String[] args ) throws Exception
     {
-        Server server = new Server(8080);
+        Server server = new Server(9090);
         ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
         server.setHandler(handler);
-        handler.addServlet(FaultyServlet.class, "/test");
+        handler.addServlet(FaultyServlet.class, "/faulty");
         server.start();
         server.dumpStdErr();
         server.join();
